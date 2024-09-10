@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <style>
+        body {
+            background: url('https://wallpapercave.com/wp/wp9764009.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            width: 500px;
+            height: 400px;
+            background-color: rgba(30, 30, 30, 0.7); /* Gris oscuro más transparente */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-form {
+            width: 80%;
+        }
+
+        input[type="text"], input[type="password"] {
+            background-color: rgba(50, 50, 50, 0.7); /* Gris oscuro transparente */
+            border: 1px solid #003366; /* Borde azul marino */
+            color: white; /* Texto en blanco */
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #003366; /* Azul marino */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #002244; /* Azul más oscuro al pasar el cursor */
+            }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <form id="loginForm"><string>
+    <font size="4" color="white">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+    </font>
+</string>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === 'Aceituna08' && password === '123454321') {
+                window.location.href = 'https://aceituna08.github.io/Dise-o_web/';
+            } else {
+                alert('Nombre de usuario o contraseña incorrectos.');
+            }
+        });
+
